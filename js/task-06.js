@@ -12,5 +12,7 @@ const txtLength = +inputTxt.dataset.length;
 function validation(event) {
 if (event.currentTarget.value.length === txtLength) {
     inputTxt.classList.add("valid");
-} else {inputTxt.classList.add("invalid");}
+    inputTxt.classList.remove("invalid");
+} else {inputTxt.classList.add("invalid");
+inputTxt.classList.remove("valid");}
 };

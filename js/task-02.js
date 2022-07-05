@@ -14,7 +14,18 @@ const ingredients = [
   'Condiments',
 ];
 
-const markup = (ingredients) => ingredients.reduce((acc, ingredient) => (acc + `<li class="item">${ingredient}</li>`),"");
-console.log(markup(ingredients));
+//const markup = (ingredients) => ingredients.map() =>`<li class="item">${ingredient}</li>`),"");
+//console.log(markup(ingredients));
 
-list.insertAdjacentHTML("beforeend", markup(ingredients));
+//list.insertAdjacentHTML("beforeend", markup(ingredients));
+
+const markup = (ingredients) => 
+{return ingredients.map(ingredient => {
+  const listItem = document.createElement("li");
+  listItem.classList.add("item");
+  listItem.textContent = `${ingredient}`;
+  return listItem;
+} )
+}
+const ingredientsList = markup(ingredients)
+list.append(...ingredientsList);

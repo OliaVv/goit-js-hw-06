@@ -22,9 +22,21 @@ const images = [
 ];
 
 const image = document.createElement("img");
-console.log(image);
+//console.log(image);
 const gallery = images.reduce((acc, image) => (acc + `<li class="item"><img class="image" src="${image.url}" alt="${image.alt}" width = "400px" height = "280px"></li>`),"");
-console.log(gallery);
+//console.log(gallery);
+
+//const gallery = images => 
+//{return images.map(image =>{
+// const item = document.createElement("li");
+//  item.classList.add("item");
+//const imageItem = document.createElement("img");
+//  imageItem.src = image.url;
+//  imageItem.alt = image.alt;
+//  item.append(imageItem);
+//return item;
+//})
+//}
 
 const list = document.querySelector(".gallery")
 console.log(list);
@@ -33,7 +45,7 @@ list.insertAdjacentHTML("beforeend", gallery);
 list.style.display = "flex";
 list.style.listStyle = "none";
 
-const item = document.querySelectorAll(".item");
+//const item = document.querySelectorAll(".item");
 //item.style.decorationStyle = "none";
 //item.style.gap = "30px";
 //image.style.objectFit = "cover";
