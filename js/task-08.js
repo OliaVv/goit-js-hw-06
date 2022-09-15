@@ -10,6 +10,7 @@ loginForm.addEventListener("submit", formSubmit);
 
 function formSubmit(event) {
 event.preventDefault();
+    console.log(event);
     const email = event.currentTarget.elements.email.value;
     const password = event.currentTarget.elements.password.value;
 
